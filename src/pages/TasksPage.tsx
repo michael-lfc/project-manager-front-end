@@ -1,6 +1,6 @@
 import { useEffect, useState, useCallback } from 'react'
 import { useSearchParams }                   from 'react-router-dom'
-import { useAuth }                           from '../hooks/useAuth.ts'
+// import { useAuth }                           from '../hooks/useAuth.ts'
 import { useSocket }                         from '../hooks/useSocket.ts'
 import api, { getErrorMessage }              from '../services/api.ts'
 import CommentList                           from '../components/tasks/CommentList.tsx'
@@ -57,7 +57,7 @@ const priorityColor = (priority: string): string => {
 }
 
 export default function TasksPage() {
-  const { user }                            = useAuth()
+  // const { user }                            = useAuth()
   const { socket }                          = useSocket()
   const [searchParams]                      = useSearchParams()
   const projectId                           = searchParams.get('project')
